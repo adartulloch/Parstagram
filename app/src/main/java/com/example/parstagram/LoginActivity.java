@@ -57,6 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                     Log.i(TAG, "Issue with login", e);
                     return;
                 }
+                Log.i(TAG, "Navigating into the feed");
                 // TODO: navigate to the Main Activity if the user has signed in successfully
                 goMainActivity();
             }
