@@ -7,60 +7,63 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/tvUsername"
+        android:id="@+id/tvDetailsUsername"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:text="TextView"
+        android:layout_marginLeft="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="Adar" />
     <ImageView
-        android:id="@+id/ivImage"
+        android:id="@+id/ivDetailsImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:layout_below="@id/tvUsername"
-        android:scaleType="centerCrop"
+        android:layout_below="@id/tvDetailsUsername"
         tools:srcCompat="@tools:sample/avatars" />
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/tvDetailsDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ivImage"
+        android:layout_below="@id/ivDetailsImage"
         android:text="TextView"
+        android:layout_marginLeft="5dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#B6B1B1"
         android:textSize="14sp"
         tools:text="15 m ago" />
 
     <ImageView
-        android:id="@+id/ivLikeButton"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_below="@id/tvDate"
+        android:id="@+id/ivDetailsLikeButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_below="@id/tvDetailsDate"
         app:srcCompat="@drawable/ufi_heart_icon" />
 
     <ImageView
-        android:id="@+id/ivCommentButton"
-        android:layout_width="25dp"
-        android:layout_height="25dp"
-        android:layout_below="@id/tvDate"
+        android:id="@+id/ivDetailsCommentButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_below="@id/tvDetailsDate"
         android:layout_marginLeft="10dp"
-        android:layout_toRightOf="@id/ivLikeButton"
+        android:layout_toRightOf="@id/ivDetailsLikeButton"
         app:srcCompat="@drawable/ufi_comment" />
+    <TextView
+        android:id="@+id/tvDetailsDescription"
+        android:layout_width="match_parent"
+        android:layout_below="@id/ivDetailsLikeButton"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="5dp"
+        tools:text="still trying to find my sense of fashion" />
 
     <ImageView
         android:id="@+id/ivSaveButton"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_below="@id/tvDate"
+        android:layout_below="@id/tvDetailsDate"
         android:layout_alignParentRight="true"
         android:layout_marginRight="5dp"
         app:srcCompat="@drawable/ufi_save_icon" />
-    <TextView
-        android:id="@+id/tvDescription"
-        android:layout_width="match_parent"
-        android:layout_below="@id/ivLikeButton"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        tools:text="still trying to find my sense of fashion" />
 </RelativeLayout>
