@@ -13,9 +13,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
-import com.example.parstagram.Post;
-import com.example.parstagram.PostsAdapter;
+import com.example.parstagram.models.Post;
+import com.example.parstagram.adapters.PostsAdapter;
 import com.example.parstagram.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -40,6 +41,7 @@ public class PostsFragment extends Fragment {
     protected PostsAdapter postsAdapter;
     protected List<Post> allPosts;
     protected SwipeRefreshLayout swipeContainer;
+    protected Button btnLogout;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,7 +51,6 @@ public class PostsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
     public PostsFragment() {
         // Required empty public constructor
     }
@@ -93,6 +94,10 @@ public class PostsFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         rvPosts = view.findViewById(R.id.rvPosts);
+        btnLogout = view.findViewById(R.id.btnLogout);
+        btnLogout.setVisibility(View.GONE);
+
+
         swipeContainer = (SwipeRefreshLayout) view.findViewById(R.id.swipeContainer);
 
         swipeRefresh(swipeContainer);

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="8dp"
+    android:layout_margin="0dp"
     android:orientation="vertical">
 
     <TextView
@@ -14,13 +14,21 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         tools:text="Adar" />
 
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#B6B1B1"
+        android:textSize="14sp"
+        tools:text="15 m ago" />
     <ImageView
         android:id="@+id/ivImage"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/tvDescription"
         android:layout_width="match_parent"

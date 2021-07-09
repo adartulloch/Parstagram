@@ -22,10 +22,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.parstagram.FeedActivity;
-import com.example.parstagram.LoginActivity;
-import com.example.parstagram.MainActivity;
-import com.example.parstagram.Post;
+import com.example.parstagram.activities.LoginActivity;
+import com.example.parstagram.models.Post;
 import com.example.parstagram.R;
 import com.parse.ParseException;
 import com.parse.ParseFile;
@@ -47,10 +45,8 @@ public class ComposeFragment extends Fragment {
     public static final String TAG = "ComposeFragment";
     private File photoFile;
     private EditText etDescription;
-    private Button btnLogout;
     private Button btnSubmit;
     private Button btnCaptureImage;
-    private Button btnFeed;
     private ImageView ivPostImage;
     public String photoFileName = "photo.jpg";
 
@@ -113,7 +109,6 @@ public class ComposeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         btnSubmit = view.findViewById(R.id.btnSubmit);
-        btnLogout = view.findViewById(R.id.btnLogout);
         ivPostImage = view.findViewById(R.id.ivPostImage);
         btnCaptureImage = view.findViewById(R.id.btnCaptureImage);
         etDescription = view.findViewById(R.id.etDescription);
@@ -139,18 +134,6 @@ public class ComposeFragment extends Fragment {
                 ParseUser currentUser = ParseUser.getCurrentUser();
                 savePost(description, currentUser, photoFile);
 
-            }
-        });
-        btnLogout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //User will logout of the application
-                ParseUser currentUser = ParseUser.getCurrentUser();
-                currentUser.logOut();
-
-                //Go back to the Login Screen
-                Intent i = new Intent(getContext(), LoginActivity.class);
-                startActivity(i);
             }
         });
     }

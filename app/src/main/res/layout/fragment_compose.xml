@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:layout_margin="16dp"
     tools:context=".fragments.ComposeFragment">
 
     <EditText
@@ -18,8 +19,9 @@
         android:id="@+id/btnCaptureImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="#D4D4D5"
         android:text="Take Picture"
-        />
+        android:textColor="@color/black" />
 
     <ImageView
         android:id="@+id/ivPostImage"
@@ -32,12 +34,8 @@
         android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit" />
-
-    <Button
-        android:id="@+id/btnLogout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Logout" />
+        android:backgroundTint="#D4D4D5"
+        android:text="Submit"
+        android:textColor="@color/black" />
 
 </LinearLayout>
